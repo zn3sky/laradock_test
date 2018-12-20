@@ -63,6 +63,8 @@
                 margin-bottom: 30px;
             }
         </style>
+        <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -82,14 +84,12 @@
                     Laravel
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <div id="test">
+                    <test-component></test-component>
+                    <test-component></test-component>
                 </div>
             </div>
         </div>
     </body>
+    <script src=" {{ mix('js/test.js') }} "></script>
 </html>

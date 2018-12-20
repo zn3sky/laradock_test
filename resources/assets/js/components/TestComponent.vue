@@ -6,7 +6,7 @@
                     <div class="panel-heading">Test Component</div>
 
                     <div class="panel-body">
-                        I'm an test component!
+                        I'm an test component!{{ msg }}
                     </div>
                 </div>
             </div>
@@ -16,6 +16,11 @@
 
 <script>
     export default {
+        data () {
+            return {
+                msg: 'こんにちは！',
+            }
+        },
         mounted() {
             console.log('TestComponent mounted.')
         }

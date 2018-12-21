@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('/test/{code}', function () {
     return view('test');
 });
+
+Route::resources([
+    'items' => 'ItemController',
+]);

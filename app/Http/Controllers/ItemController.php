@@ -14,7 +14,9 @@ class ItemController extends Controller
      */
     public function index()
     {
-        //
+        $items = Item::all();
+
+        return view('item.index',['items' => $items]);
     }
 
     /**
@@ -24,7 +26,7 @@ class ItemController extends Controller
      */
     public function create()
     {
-        //
+        return view('item.create');
     }
 
     /**
@@ -35,7 +37,7 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // TODO
     }
 
     /**
@@ -46,7 +48,7 @@ class ItemController extends Controller
      */
     public function show(Item $item)
     {
-        //
+        return view('item.show', ['item' => $item]);
     }
 
     /**
@@ -57,7 +59,7 @@ class ItemController extends Controller
      */
     public function edit(Item $item)
     {
-        //
+        return view('item.edit', ['item' => $item]);
     }
 
     /**
@@ -69,7 +71,7 @@ class ItemController extends Controller
      */
     public function update(Request $request, Item $item)
     {
-        //
+        // TODO
     }
 
     /**
@@ -80,6 +82,6 @@ class ItemController extends Controller
      */
     public function destroy(Item $item)
     {
-        //
+        // TODO
     }
 }

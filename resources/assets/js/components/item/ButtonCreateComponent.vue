@@ -4,10 +4,15 @@
 
 <script>
     export default {
+        props: {
+            createPageUrl : {
+                type:     String,
+                required: true,
+            },
+        },
         methods: {
             moveToCreatePage() {
-                // TODO PHP_VARSから取得
-                location.href = '/items/create';
+                location.href = this.createPageUrl;
             },
         },
     }

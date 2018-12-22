@@ -43398,10 +43398,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+    props: {
+        createPageUrl: {
+            type: String,
+            required: true
+        }
+    },
     methods: {
         moveToCreatePage: function moveToCreatePage() {
-            // TODO PHP_VARSから取得
-            location.href = '/items/create';
+            location.href = this.createPageUrl;
         }
     }
 });

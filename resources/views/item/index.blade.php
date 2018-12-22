@@ -8,7 +8,9 @@
 
 @section('content')
     <div id="js-content">
-        <button-create-component></button-create-component>
+        <button-create-component
+            create-page-url="{{ action('ItemController@create') }}"
+        ></button-create-component>
         @foreach ($items as $item)
             @if ($loop->first)
                 <table>

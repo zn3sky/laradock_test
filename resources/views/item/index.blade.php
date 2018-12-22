@@ -27,6 +27,7 @@
                     <input type="button" value="詳細">
                     <button-edit-component
                         :id={{ $item->id }}
+                        edit-page-url="{{ action('ItemController@edit', [$item->id]) }}"
                     ></button-edit-component>
                     <input type="button" value="削除">
                 </td>

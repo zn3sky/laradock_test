@@ -43494,15 +43494,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: {
-        id: {
-            type: Number,
+        editPageUrl: {
+            type: String,
             required: true
         }
     },
     methods: {
         moveToEditPage: function moveToEditPage() {
-            // TODO PHP_VARSから取得
-            location.href = '/items/' + this.id + '/edit';
+            location.href = this.editPageUrl;
         }
     }
 });

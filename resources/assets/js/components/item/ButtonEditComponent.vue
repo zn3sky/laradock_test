@@ -5,15 +5,14 @@
 <script>
     export default {
         props: {
-            id : {
-                type:     Number,
+            editPageUrl : {
+                type:     String,
                 required: true,
             },
         },
         methods: {
             moveToEditPage() {
-                // TODO PHP_VARSから取得
-                location.href = '/items/' + this.id + '/edit';
+                location.href = this.editPageUrl;
             },
         },
     }

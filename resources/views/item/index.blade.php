@@ -23,7 +23,9 @@
                 <td>{{ $item->name }}</td>
                 <td>
                     <input type="button" value="詳細">
-                    <input type="button" value="編集">
+                    <button-edit-component
+                        :id={{ $item->id }}
+                    ></button-edit-component>
                     <input type="button" value="削除">
                 </td>
             </tr>

@@ -2,11 +2,19 @@
 
 @section('title', '新規登録')
 
+
+@section('script')
+    <script src=" {{ mix('js/item/create.js') }} "></script>
+@endsection
+
 @section('sidebar')
 @endsection
 
 @section('content')
-    <div>name:<input type="text"><div>
-    <input type="button" value="一覧へ戻る">
-    <input type="button" value="登録確認">
+        <div id="js-content">
+        <create-form-component
+            index-url="{{ action('ItemController@index') }}"
+            store-url="{{ action('ItemController@store') }}"
+        ></create-form-component>
+    </div>
 @endsection

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Item;
 use Illuminate\Http\Request;
+use App\Http\Requests\ItemRequest;
 
 class ItemController extends Controller
 {
@@ -32,13 +33,17 @@ class ItemController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  App\Http\Requests\ItemRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ItemRequest $request)
     {
-        // TODO
-        dd($request);
+        Item::create(['name' => $request->name]);
+
+        // TODO 登録完了メッセージをセッションへ
+        // TODO エラー処理
+
+        return redirect()->action('ItemController@index');
     }
 
     /**
